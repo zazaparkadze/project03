@@ -1,5 +1,5 @@
 import MeteoPage from "./MeteoPage";
-import { objValuesToString } from "@/lib/objValuesToString";
+import objValuesToString from "@/lib/objValuesToString";
 import Link from "next/link";
 
 type Props = {
@@ -20,8 +20,8 @@ export default function GeoPage({ result }: Props) {
         <li>latitude {latitude}</li>
         <li>Timezone {timezone}</li>
       </ol>
-      <p className="text-4xl text-center">
-        <Link href={`/geo/${name}/meteo`}> Get weather info</Link>
+      <p className="text-4xl text-center font-extrabold underline">
+        <Link href={`/geo/${name}/meteo`}> Get Weather Info</Link>
       </p>
       <div className={`text-2xl text-amber-300`}>
         <MeteoPage searchObject={meteoParamObject} />

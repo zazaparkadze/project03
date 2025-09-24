@@ -34,7 +34,7 @@ export default function GeoLocation() {
             className="text-3xl w-33
          bg-gray-400  border-2 rounded-2xl p-1 border-gray-700 active:bg-gray-800 active:text-gray-400"
           >
-            {/*   &#9836; */} 🡅 send
+            🡅 send
           </button>
         </form>
       </div>
