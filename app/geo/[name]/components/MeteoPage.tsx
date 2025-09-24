@@ -9,7 +9,7 @@ export default async function MeteoPage({ searchObject }: Props) {
   const meteoData: Promise<meteoResults> = getMeteoResults(searchObject);
   const meteo = await meteoData;
 
-  let content = (
+  const content = (
     <div className="text-black m-5">
       <h1 className="text-3xl font-bold underline">Content</h1>
       {Object.entries(meteo).map(([key, value]) => (
