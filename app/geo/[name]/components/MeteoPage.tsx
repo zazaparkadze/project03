@@ -10,7 +10,7 @@ export default async function MeteoPage({ searchObject }: Props) {
   const meteoData: Promise<meteoResults> = getMeteoResults(searchObject);
   const meteo = await meteoData;
 
-  let timeTemperature: string[][] = [];
+  const timeTemperature: string[][] = [];
   meteo.hourly.time.forEach((element) =>
     timeTemperature.push([
       element,
@@ -49,8 +49,8 @@ export default async function MeteoPage({ searchObject }: Props) {
                   {value} ℃
                 </span>
               </p>
-              <p>Wind: "wind"</p>
-              <p>Precipitation: "Almost Zero "</p>
+              <p>Wind: &quot;wind&quot;</p>
+              <p>Precipitation: Almost Zero </p>
             </section>
             <article>
               <p>Comment:</p>
