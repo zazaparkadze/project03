@@ -5,6 +5,12 @@ type HourlyObject = {
   time: ArrayOfStrings;
   temperature_2m: ArrayOfNumbers;
   relative_humidity_2m: ArrayOfNumbers;
+  wind_speed_10m: ArrayOfNumbers;
+  current: {
+    time: ArrayOfStrings;
+    temperature_2m?: string;
+    wind_speed_10m?: string;
+  };
 };
 
 type geoResults = {
@@ -30,7 +36,7 @@ type geoResults = {
   admin3?: string;
   admin4?: string;
 };
-
+/* 
 type meteoSearchObject = {
   latitude: string;
   longitude: string;
@@ -48,7 +54,7 @@ type meteoSearchObject = {
   admin1?: string;
   forecast_days?: string;
 };
-
+ */
 type meteoResults = {
   latitude: number;
   longitude: number;
@@ -58,6 +64,10 @@ type meteoResults = {
   timezone: string;
   timezone_abbreviation: string;
   hourly: HourlyObject;
+  current: {
+    temperature_2m?: string;
+    wind_speed_10m?: string;
+  };
   hourly_units: {
     temperature_2m?: ArrayOfNumbers;
   };

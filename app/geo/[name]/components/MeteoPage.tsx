@@ -49,7 +49,7 @@ export default async function MeteoPage({ searchObject }: Props) {
                   {value} ℃
                 </span>
               </p>
-              <p>Wind: &quot;wind&quot;</p>
+              <p>Wind: {meteo.current.wind_speed_10m}</p>
               <p>Precipitation: Almost Zero </p>
             </section>
             <article>

@@ -3,6 +3,7 @@ export default async function getMeteoResults(searchObject: SearchObject) {
   const searchParams = new URLSearchParams(searchObject);
   searchParams.append("hourly", "temperature_2m");
   searchParams.append("forecast_days", forecast_days);
+  searchParams.append("current", "wind_speed_10m");
 
   const url = "https://api.open-meteo.com/v1/forecast?" + searchParams;
   const res = await fetch(url);
