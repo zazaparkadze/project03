@@ -1,12 +1,22 @@
 import React from "react";
 import getGeoResults from "@/lib/getGeoResults";
 import GeoPage from "./components/GeoPage";
+import type { Metadata } from "next";
 
 type Props = {
   params: {
     name: string;
   };
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { name } = await params;
+
+  return {
+    title: `${name} weather`,
+    description: `${name} weather forecast`,
+  };
+}
 
 export default async function page({ params }: Props) {
   const { name } = await params;

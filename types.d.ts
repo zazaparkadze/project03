@@ -3,8 +3,8 @@ type ArrayOfNumbers = number[];
 
 type HourlyObject = {
   time: ArrayOfStrings;
-  temperature_2m?: ArrayOfNumbers;
-  relative_humidity_2m?: ArrayOfNumbers;
+  temperature_2m: ArrayOfNumbers;
+  relative_humidity_2m: ArrayOfNumbers;
 };
 
 type geoResults = {
@@ -59,7 +59,7 @@ type meteoResults = {
   timezone_abbreviation: string;
   hourly: HourlyObject;
   hourly_units: {
-    temperature_2m?: string;
+    temperature_2m?: ArrayOfNumbers;
   };
 };
 type SearchObject = {

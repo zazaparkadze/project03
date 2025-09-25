@@ -16,9 +16,9 @@ export default function GeoPage({ result }: Props) {
       <ol className="text-2xl text-center ">
         <li>id: {id}</li>
         <li>Name: {name}</li>
-        <li>Longitude {longitude}</li>
-        <li>latitude {latitude}</li>
-        <li>Timezone {timezone}</li>
+        <li>Longitude: {longitude}</li>
+        <li>Latitude: {latitude}</li>
+        <li>Timezone: {timezone}</li>
       </ol>
       <p className="text-4xl text-center font-extrabold underline">
         <Link href={`/geo/${name}/meteo`}> Get Weather Info</Link>
