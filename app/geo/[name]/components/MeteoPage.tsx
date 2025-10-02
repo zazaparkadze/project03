@@ -1,5 +1,6 @@
 import React from "react";
 import getMeteoResults from "@/lib/getMeteoResults";
+import SunPage from "./SunPage";
 import clsx from "clsx";
 
 type Props = {
@@ -20,17 +21,8 @@ export default async function MeteoPage({ searchObject }: Props) {
 
   const content = (
     <div className="text-black m-5">
-      <h1 className="text-3xl font-bold underline">Content</h1>
-      <article>
-        <p>Sunrise:</p>
-        <p>Sunset:</p>
-        <br />
-      </article>
-      {/*    {Object.entries(meteo).map(([key, value]) => (
-        <p key={key}>
-          {JSON.stringify(key)} : {JSON.stringify(value)}
-        </p>
-      ))} */}
+      <SunPage name={searchObject.name} />
+      <br />
 
       {timeTemperature.map(([time, value]) => {
         const dateTime = new Date(time).toString();
@@ -51,11 +43,8 @@ export default async function MeteoPage({ searchObject }: Props) {
               </p>
               <p>Wind: {meteo.current.wind_speed_10m}</p>
               <p>Precipitation: Almost Zero </p>
-            </section>
-            <article>
-              <p>Comment:</p>
               <br />
-            </article>
+            </section>
           </div>
         );
       })}

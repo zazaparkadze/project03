@@ -5,7 +5,6 @@ export default async function getGeoResults(name: string) {
     format: "json",
     language: "en",
     apikey: "",
-    /*     contryCode: "GE", */
   };
   const searchParams = new URLSearchParams(paramsObj);
   const res = await fetch(
