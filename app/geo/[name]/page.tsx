@@ -31,7 +31,7 @@ export default async function page({ params }: Props) {
     );
   }
   const content = (
-    <div className="flex flex-col wrap-break-word bg-gray-300 text-black min-h-[100vh]">
+    <div className="flex flex-col wrap-break-word bg-gray-300 text-black min-h-[100vh] justify-center items-center">
       <h1 className="text-4xl text-center font-bold"> {name.toUpperCase()}</h1>
       {geoResults.map((result) => (
         <GeoPage result={result} key={result.id} />

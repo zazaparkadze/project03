@@ -13,7 +13,7 @@ export default function GeoPage({ result }: Props) {
   const meteoParamObject: SearchObject = objValuesToString(meteoParamObjectRaw);
   return (
     <div>
-      <ol className="text-2xl text-center ">
+      <ol className="text-2xl text-center flex flex-col">
         <li>id: {id}</li>
         <li>Name: {name}</li>
         <li>Longitude: {longitude}</li>

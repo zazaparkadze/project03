@@ -1,4 +1,3 @@
-import React from "react";
 import getGeoResults from "./getGeoResults";
 import { URLSearchParams } from "url";
 

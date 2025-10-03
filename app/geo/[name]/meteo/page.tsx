@@ -32,7 +32,7 @@ export default async function Meteo({ params }: Props) {
   const meteoParamObject: SearchObject = objValuesToString(meteoParamObjectRaw);
 
   return (
-    <div className={`text-3xl text-amber-500`}>
+    <div className={`text-3xl text-amber-500 flex flex-col items-center`}>
       <h1>Under Construction</h1>
       <MeteoPage searchObject={meteoParamObject} />
     </div>
