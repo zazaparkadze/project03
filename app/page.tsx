@@ -16,7 +16,13 @@ export default async function Home() {
         <ul className="font-mono  list-none text-center sm:text-left text-2xl">
           <li>
             <Link href={"geo"}>
-              <p>GeoLocation information for specified location</p>
+              <p className="hover:text-black">GeoLocation, weather forecast</p>
+            </Link>
+          </li>
+          <br />
+          <li>
+            <Link href={"profiles"}>
+              <p className="hover:text-black">Profiles</p>
             </Link>
           </li>
           <br />

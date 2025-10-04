@@ -3,6 +3,7 @@ import MeteoPage from "../components/MeteoPage";
 import getGeoResults from "@/lib/getGeoResults";
 import objValuesToString from "@/lib/objValuesToString";
 import type { Metadata } from "next";
+import { LuHandshake } from "react-icons/lu";
 
 type Props = {
   params: {
@@ -23,9 +24,9 @@ export default async function Meteo({ params }: Props) {
   const { name } = await params;
   const geoData = getGeoResults(name);
   const geoResultsRaw = await geoData;
-  /*   console.log(geoResultsRaw); */
+
   const geoResults: geoResults[] = geoResultsRaw.results;
-  /*   console.log(geoResults); */
+
   const { latitude, longitude } = geoResults[0];
 
   const meteoParamObjectRaw: geoResults = { name, latitude, longitude };
@@ -33,7 +34,9 @@ export default async function Meteo({ params }: Props) {
 
   return (
     <div className={`text-3xl text-amber-500 flex flex-col items-center`}>
-      <h1>Under Construction</h1>
+      <h1 className="flex flex-row gap-10 text-5xl pt-4">
+        Hello I&apos;m Zaza <LuHandshake />
+      </h1>
       <MeteoPage searchObject={meteoParamObject} />
     </div>
   );
