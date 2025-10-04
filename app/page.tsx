@@ -26,6 +26,12 @@ export default async function Home() {
             </Link>
           </li>
           <br />
+          <li>
+            <Link href={"wikirocket"}>
+              <p className="hover:text-black">WikiRocket</p>
+            </Link>
+          </li>
+          <br />
         </ul>
       </main>
     </div>

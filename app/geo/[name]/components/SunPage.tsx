@@ -9,7 +9,7 @@ export default async function SunPage({ name }: { name: string }) {
   const content = (
     <div className="flex flex-col w-fit gap-y-2">
       <div className="flex flex-col h-[160px] text-3xl items-center justify-between text-nowrap bg-slate-600 text-amber-300 py-4 rounded-[15px] grow-1 ">
-        <div> In {name}</div>
+        <div> In {name.replace(/^./, (char) => char.toUpperCase())}</div>
         <div className="flex flex-row gap-x-6 ">
           <HomeButton />
           <BackButton />
