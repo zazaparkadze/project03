@@ -6,7 +6,6 @@ type Props = {
 };
 
 export default function item({ result }: Props) {
-  console.log(result.thumbnail?.source);
   const content = (
     <main
       key={result.pageid}
@@ -17,7 +16,7 @@ export default function item({ result }: Props) {
       rounded-xl border-1 border-transparent w-fit"
       >
         {result.thumbnail?.source ? (
-          <img
+          <Image
             src={result.thumbnail.source}
             width={result.thumbnail.width}
             height={result.thumbnail.height}

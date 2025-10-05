@@ -9,8 +9,8 @@ export default async function Home() {
           className="dark:invert"
           src="/next.svg"
           alt="Next.js logo"
-          width={180}
-          height={38}
+          width={300}
+          height={61}
           priority
         />
         <ul className="font-mono  list-none text-center sm:text-left text-2xl">

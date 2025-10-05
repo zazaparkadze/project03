@@ -33,7 +33,6 @@ type meteoResult = {
   timezone: string;
   timezone_abbreviation: string;
   elevation: number;
-
   current_units: {
     time: string;
     interval: string;
@@ -86,6 +85,7 @@ type SunsetSunrizeResult = {
   };
   status: string;
 };
+
 type Post = {
   id: number;
   userId: string;
@@ -126,6 +126,7 @@ type Employee = {
   name: string;
   occupation: string;
 };
+
 type Result = {
   pageid: string;
   title: string;
